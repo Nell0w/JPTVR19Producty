@@ -44,7 +44,7 @@ public class Product implements Serializable {
     public String toString() {
         return ""
                 + "Товар: " + name
-                + ", цена: " + price
-                + ", номер товара: " + productNumber;
+                + ", Цена: " + price
+                + ", Номер товара: " + productNumber;
     }
 }

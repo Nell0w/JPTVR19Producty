@@ -13,7 +13,7 @@ public class ProductManager {
         product.setName(scanner.nextLine());
         System.out.print("Введите цену товара: ");
         product.setPrice(scanner.nextInt());
-        System.out.print("Введите код товара: ");
+        System.out.print("Введите ТН ВЭД товара: ");
         product.setProductNumber(scanner.nextInt());
         System.out.println("Добавлен товар: " + product.getName());
         return product;

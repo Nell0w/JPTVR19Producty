@@ -13,7 +13,7 @@ public class HistoryManager {
     private ProductManager productManager = new ProductManager();
     public History takeOnProduct(Product[] products, Customer[] customers) {
         History history = new History();
-        System.out.println("--- Список пользователей ---");
+        System.out.println("|| Список пользователей ||");
         customerManager.printListCustomers(customers);
         System.out.print("Выберите номер пользователя: ");
         int readerNumber = scanner.nextInt();
@@ -22,7 +22,7 @@ public class HistoryManager {
         history.setReader(customer);
         productManager.printListProducts(products);
         this.addingBalance(history);
-        System.out.println("--- Список товаров ---");
+        System.out.println("|| Список товаров ||");
         productManager.printListProducts(products);
         System.out.print("Выберите номер товара: ");
         int bookNumber;
@@ -39,18 +39,17 @@ public class HistoryManager {
     public void addingBalance(History history) {
         int balance = 0;
         System.out.println();
-        System.out.println("------------------------------");
-        System.out.println("Ваш баланс: " + balance + " евро");
-        System.out.println("------------------------------");
+        System.out.println("______________________________");
+        System.out.println("Ваш баланс: " + balance + " Евро");
+        System.out.println("______________________________");
         System.out.println();
-        System.out.println("Желаете ли Вы пополнить баланс?");
+        System.out.println("Желаете ли пополнить баланс?");
         System.out.println("1. Да");
         System.out.println("2. Нет");
         String choice = scanner.nextLine();
         if (choice.equals("1")) {
-            System.out.println("Выберите способ пополнения баланса: ");
+            System.out.println("Каким способом хотите пополнить баланс?");
             System.out.println("1. Банковским переводом");
-            System.out.println("2. СМС пополнение");
             int userBalanceWay = scanner.nextInt();
             System.out.print("Введите сумму, которую желаете пополнить: ");
             int userBalance = scanner.nextInt();
@@ -60,18 +59,13 @@ public class HistoryManager {
                     System.out.println("Получатель: Market OÜ");
                     System.out.println("Номер счёта: EE198484999489634797984");
                     System.out.println("Пояснение: PAYMENT #5235254");
-
-                case 2:
-                    System.out.println("Для пополнения баланса на " + userBalance + " евро:");
-                    System.out.println("Отправтье СМС сообщение на номер: +3725884984");
-                    System.out.println("с текстом: 44444");
             }
 
             balance = balance + userBalance;
             System.out.println();
-            System.out.println("------------------------------");
-            System.out.println("Ваш баланс: " + balance + " евро");
-            System.out.println("------------------------------");
+            System.out.println("______________________________");
+            System.out.println("Ваш баланс: " + balance + " Евро");
+            System.out.println("______________________________");
         }
     }
 
@@ -99,7 +93,7 @@ public class HistoryManager {
     }
 
     private void printHistory(History history) {
-        System.out.printf("Товар \"%s\" куплен пользователем %s %s%n"
+        System.out.printf("Товар \"%s\" куплен покупателем %s %s%n"
                 ,history.getProduct().getName()
                 ,history.getCustomer().getFirstname()
                 ,history.getCustomer().getLastname()
@@ -110,7 +104,7 @@ public class HistoryManager {
     public void printListReadProducts(History[] histories) {
         for (int i = 0; i < histories.length; i++) {
             if(histories[i] != null && histories[i].getArrivalTime()==null){
-                System.out.printf("%d. Товар \"%s\" куплен пользователем %s %s%n"
+                System.out.printf("%d. Товар \"%s\" куплен покупателем %s %s%n"
                         ,i+1
                         ,histories[i].getProduct().getName()
                         ,histories[i].getCustomer().getFirstname()

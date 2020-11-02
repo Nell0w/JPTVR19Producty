@@ -7,7 +7,7 @@ public class CustomerManager {
     public Customer createCustomer() {
         Scanner scanner = new Scanner(System.in);
         Customer customer = new Customer();
-        System.out.println("--- Регистрация нового пользователя ---");
+        System.out.println("|| Регистрация нового пользователя ||");
         System.out.print("Введите имя: ");
         customer.setFirstname(scanner.nextLine());
         System.out.print("Введите фамилию: ");
