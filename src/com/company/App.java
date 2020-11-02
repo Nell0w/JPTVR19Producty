@@ -28,9 +28,9 @@ class App {
     }
 
     public void run() {
-        System.out.println("------------------------------------");
-        System.out.println("LapShop | магазин продуктов");
-        System.out.println("------------------------------------");
+        System.out.println("==============================");
+        System.out.println("Market | Магазин продуктов");
+        System.out.println("==============================");
         System.out.println();
         boolean repeat = true;
         Scanner scanner = new Scanner(System.in);
@@ -49,17 +49,18 @@ class App {
             switch (task) {
                 case "0":
                     System.out.println();
-                    System.out.println("--------------------------------");
-                    System.out.println("Выбрана задача: 0. Выйти из программы");
-                    System.out.println("--------------------------------");
+                    System.out.println("=========================");
+                    System.out.println("0. Выйти из магазина");
+                    System.out.println("=========================");
                     System.out.println();
-                    System.out.println("--- Конец программы ---");
+                    System.out.println("|Конец программы|");
+                    repeat = false;
                     break;
                 case "1":
                     System.out.println();
-                    System.out.println("--------------------------------");
-                    System.out.println("Выбрана задача: 1. Добавить товар");
-                    System.out.println("--------------------------------");
+                    System.out.println("=========================");
+                    System.out.println("1. Добавить товар");
+                    System.out.println("=========================");
 
                     Product product = ProductManager.createProduct();
                     productManager.addProductToArray(product, products);
@@ -69,9 +70,9 @@ class App {
                     break;
                 case "2":
                     System.out.println();
-                    System.out.println("--------------------------------");
-                    System.out.println("Выбрана задача: 2. Список товаров");
-                    System.out.println("--------------------------------");
+                    System.out.println("=========================");
+                    System.out.println("2. Список товаров");
+                    System.out.println("=========================");
 
                     productManager.printListProducts(products);
 
@@ -79,9 +80,9 @@ class App {
                     break;
                 case "3":
                     System.out.println();
-                    System.out.println("--------------------------------");
-                    System.out.println("Выбрана задача: 3. Добавить пользователя");
-                    System.out.println("--------------------------------");
+                    System.out.println("=========================");
+                    System.out.println("3. Добавить пользователя");
+                    System.out.println("=========================");
 
                     Customer customer = customerManager.createCustomer();
                     customerManager.addCustomerToArray(customer, customers);
@@ -91,9 +92,9 @@ class App {
                     break;
                 case "4":
                     System.out.println();
-                    System.out.println("--------------------------------");
-                    System.out.println("Выбрана задача: 4. Список пользователей");
-                    System.out.println("--------------------------------");
+                    System.out.println("=========================");
+                    System.out.println("4. Список пользователей");
+                    System.out.println("=========================");
                     System.out.println();
 
                     customerManager.printListCustomers(customers);
@@ -101,9 +102,9 @@ class App {
                     break;
                 case "5":
                     System.out.println();
-                    System.out.println("--------------------------------");
-                    System.out.println("Выбрана задача: 5. Купить товар");
-                    System.out.println("--------------------------------");
+                    System.out.println("=========================");
+                    System.out.println("5. Купить товар");
+                    System.out.println("=========================");
 
                     History history = historyManager.takeOnProduct(products, customers);
                     historyManager.addHistoryToArray(history,histories);

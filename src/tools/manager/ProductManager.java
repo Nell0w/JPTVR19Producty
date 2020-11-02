@@ -8,7 +8,7 @@ public class ProductManager {
     public static Product createProduct() {
         Scanner scanner = new Scanner(System.in);
         Product product = new Product();
-        System.out.println("--- Создание книги ---");
+        System.out.println("--- Создание товара ---");
         System.out.print("Введите название товара: ");
         product.setName(scanner.nextLine());
         System.out.print("Введите цену товара: ");

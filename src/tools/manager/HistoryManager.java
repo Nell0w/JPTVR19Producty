@@ -13,9 +13,9 @@ public class HistoryManager {
     private ProductManager productManager = new ProductManager();
     public History takeOnProduct(Product[] products, Customer[] customers) {
         History history = new History();
-        System.out.println("--- Список читателей ---");
+        System.out.println("--- Список пользователей ---");
         customerManager.printListCustomers(customers);
-        System.out.print("Выберите номер читателя: ");
+        System.out.print("Выберите номер пользователя: ");
         int readerNumber = scanner.nextInt();
         scanner.nextLine();
         Customer customer = customers[readerNumber-1];
@@ -57,14 +57,14 @@ public class HistoryManager {
             switch (userBalanceWay) {
                 case 1:
                     System.out.println("Реквизиты оплаты: ");
-                    System.out.println("Получатель: LapShop OÜ");
-                    System.out.println("Номер счёта: EE89754389135454967313");
+                    System.out.println("Получатель: Market OÜ");
+                    System.out.println("Номер счёта: EE198484999489634797984");
                     System.out.println("Пояснение: PAYMENT #5235254");
 
                 case 2:
                     System.out.println("Для пополнения баланса на " + userBalance + " евро:");
-                    System.out.println("Отправтье СМС сообщение на номер: +37254736578");
-                    System.out.println("с текстом: 52364");
+                    System.out.println("Отправтье СМС сообщение на номер: +3725884984");
+                    System.out.println("с текстом: 44444");
             }
 
             balance = balance + userBalance;

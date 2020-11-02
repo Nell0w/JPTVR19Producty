@@ -53,8 +53,8 @@ public class Customer implements Serializable{
     @Override
     public String toString() {
         return "Имя: " + firstname
-                + ", фамилия: " + lastname
-                + ", номер телефона: " + phone
-                + ", адрес: " + address;
+                + ", Фамилия: " + lastname
+                + ", Номер телефона: " + phone
+                + ", Адрес: " + address;
     }
 }

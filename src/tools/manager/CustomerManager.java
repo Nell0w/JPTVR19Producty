@@ -30,7 +30,7 @@ public class CustomerManager {
     }
 
     public void printCustomer(Customer customer) {
-        System.out.println("Добавлен читатель: "
+        System.out.println("Добавлен пользователь: "
                 + customer.getFirstname()
                 + " "
                 + customer.getLastname()

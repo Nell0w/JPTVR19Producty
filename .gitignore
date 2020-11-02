@@ -4,3 +4,5 @@ Shop.iml
 customers
 histories
 products
+/nbproject/private/
+/build/
